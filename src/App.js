@@ -1,43 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+function Welcome(props) {
+  return (
+      <h1>{props.greeting} <span style={{color:'red'}}>{props.name}</span>, {props.question}</h1>
+  );
 }
 
-function App() {
-  const filePath = "src/App.js";
-  const linkPath = "https://reactjs.org";
-
-  const user = {
-    firstName: 'Harper',
-    lastName: 'Perez'
-  };
-
+function Goodbye(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <h1>{props.answer} {props.greeting} <span style={{color:'blue'}}>{props.name}</span>.</h1>
+  );
+}
 
-        <p>Hello {user.firstName} {user.lastName}, how are you?</p>
-        <p>Also, {formatName(user)}</p>
-        <p>With an ES6 string: {`${user.firstName} ${user.lastName}`}</p>
+{/* Only need one App function */}
+function App() {
+  return (
+      <div>
 
-        <p>
-          Edit <code>{filePath}</code> if you want and save to reload.
-        </p>
+        <Welcome
+            greeting="Hello"
+            name="Sue"
+            question="do you have a dog? 🐕"
+        />
 
-        <a
-          className="App-link"
-          href={linkPath}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Goodbye
+            greeting="Goodbye"
+            name="Bob 👋"
+            answer="No, I don't."
+        />
+
+      </div>
   );
 }
 

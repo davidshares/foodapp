@@ -16,11 +16,20 @@ code {
 .container {
   text-align:center;
   padding:50px;
-  border:10px solid #ccc;
-  border-radius:5px;
+  border:10px solid #64a15e;
+  border-radius:3px;
+  box-shadow: rgba(0, 0, 0, .4) 0px 10px 50px 0px;
   margin:50px;
 }
 
 .container p {
   font-size:26px;
+}
+
+img.dog {
+  height:250px;
+  float:left;
+  margin-right:30px;
+  border:2px solid #555;
+  border-radius:3px;
 }

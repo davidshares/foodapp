@@ -12,3 +12,15 @@ code {
   background: rgba(10, 209, 169, .8);
   padding:0px 2px;
 }
+
+.container {
+  text-align:center;
+  padding:50px;
+  border:10px solid #ccc;
+  border-radius:5px;
+  margin:50px;
+}
+
+.container p {
+  font-size:26px;
+}
